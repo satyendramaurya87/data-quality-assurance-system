@@ -16,87 +16,68 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #202020;
-    padding: 15px 300px;
+    padding: 25px 5%;
     color: rgb(216, 216, 216);
+    position: relative;
 }
 
-.header-left h1 {
-    font-size: 19px;
-    font-family:'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif ;
-    font-weight: 600;
+.header-left img {
+    width: 300px; /* Adjust size as needed */
 }
-.header-left a{
-   text-decoration: none; 
-   color:rgb(216, 216, 216);;
+
+.header-right {
+    display: flex;
+    gap: 20px;
 }
-.header-left h1 span{
-    font-size: 15px;
-    font-weight: 100; 
-}
-.header-left a img{
-    width: 350px; 
-}
+
 .header-right a {
     color: white;
-    margin-left: 20px; 
     text-decoration: none;
     font-size: 14px;
 }
 
 .header-right a:hover {
-    color: #BC1820; ;
+    color: #BC1820;
 }
-.header-right a span{
-    margin: 8px; 
+
+.menu-icon {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .header-right {
+        display: none;
+        padding-left: 25px;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        background-color: #202020;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .header-right a {
+        margin-left: 40px;
+        padding: 10px;
+        border-bottom: 1px solid #2f2f2f;
+    }
+
+    .menu-icon {
+        display: block;
+    }
 }
 
 /* Main Content Styles */
-  main {
+main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 50px 20px;
-} 
-
-.logo-container {
-    max-width: 800px;
-    margin-bottom: 50px;
-    padding: 20px;
-    text-align: center;
-    /* border-radius: 10px;
-    background-color: #fff5e1; */
-}
-
-.logo-container img {
-    width: 450px;
-    margin-bottom: 20px;
-}
-
-.logo-container h2 {
-    font-size: 36px;
-    margin: 10px 0;
-    font-weight: bold;
-    color: #F2902B;
-}
-
-.logo-container p {
-    font-size: 18px;
-    margin: 5px 0;
-}
-
-.tagline {
-    font-weight: bold;
-    font-size: 22px;
-    color: #cc9900;
-    margin-top: 10px;
-}
-
-.approval {
-    font-size: 16px;
-    color: #666666;
-    margin-top: 10px;
 }
 
 /* Card Section Styles */
@@ -159,3 +140,12 @@ body {
     background-color: #cc3232;
 }
 
+/* Footer Styles */
+footer {
+    background-color: #fbf4d9;
+    color: #613d1d;
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+    border-top: 1px solid #ddd;
+}
