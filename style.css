@@ -159,19 +159,3 @@ body {
     background-color: #cc3232;
 }
 
-/* Footer Styles */
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 300px;
-    text-align: center;
-    background-color: #fbf4d9;
-    color: #613d1d;
-    font-size: 12px;
-    border-top: 1px solid #ddd;
-}
-
-footer p {
-    margin: 5px 0;
-}
