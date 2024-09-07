@@ -1,22 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galgotias University</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Add your existing styles here */
+
+        /* Responsive menu styles */
+        .header-right {
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .header-right {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 90px;
+                right: 0;
+                background-color:  #202020;
+                width: 100%;    
+                text-align: left;
+                padding: 10px;
+            }
+
+            .header-right a {
+                padding: 10px;
+                border-bottom: 1px solid #2f2f2f;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+            .ftr{
+                display: inline-table;
+                /* justify-content: space-between; */
+                align-items: center; 
+                /* padding: 15px 300px; */
+                text-align: center;
+                background-color: #fbf4d9;
+                color: #613d1d;
+                font-size: 12px;
+                border-top: 1px solid #ddd;
+           }
+            
+            
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+        }
+        
+    </style>
 </head>
+
 <body>
     <header>
         <div class="header-container">
             <div class="header-left">
-                <a href="index.html"><img src="image/gulogo.png" alt="Galgotias University Logo"></a>
+                <a href="home.html"><img src="image/gulogo.png" alt="Galgotias University Logo"></a>
             </div>
-            <div class="header-right">
+            <div class="menu-icon" id="menuIcon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="header-right" id="menuItems">
                 <a href="index.html"><span><i class="fa fa-home"></i></span> Home</a>
                 <a href="adminlogin.html"><span><i class="fa fa-desktop"></i></span> Admin Login</a>
-                <a href="index.html"><span><i class="fa fa-users"></i></span> Faculty Login</a>
+                <a href="faculty.html"><span><i class="fa fa-users"></i></span> Faculty Login</a>
             </div>
         </div>
     </header>
@@ -44,9 +108,20 @@
         </div>
     </main>
 
-    <footer>
+    <footer class="ftr">
         <p>&copy; Galgotias University, 2024. All rights reserved.</p>
         <p>Unofficial Data Quality Assurance Portal</p>
     </footer>
+
+    <script>
+        // Toggle menu visibility
+        const menuIcon = document.getElementById('menuIcon');
+        const menuItems = document.getElementById('menuItems');
+
+        menuIcon.addEventListener('click', () => {
+            menuItems.style.display = menuItems.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
 </body>
+
 </html>
