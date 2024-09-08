@@ -16,9 +16,9 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #202020;
-    padding: 25px 5%;
+    padding: 15px 3%;
     color: rgb(216, 216, 216);
-    position: relative;
+    /* position: relative; */
 }
 
 .header-left img {
@@ -38,6 +38,9 @@ body {
 
 .header-right a:hover {
     color: #BC1820;
+}
+.header-right a span{
+    margin: 8px; 
 }
 
 .menu-icon {
@@ -108,12 +111,13 @@ main {
     display: block;
     margin: 0 auto 20px;
     height: 60px;
+    margin-top: 15px;
 }
 
 .card h3 {
     font-size: 20px;
     color: #333;
-    margin: 15px 0;
+    margin-bottom: 25px;
 }
 
 .card p {
@@ -134,6 +138,7 @@ main {
     font-size: 14px;
     font-weight: bold;
     transition: background-color 0.3s;
+    margin-bottom: 25px;
 }
 
 .login-button:hover {
@@ -141,11 +146,20 @@ main {
 }
 
 /* Footer Styles */
+
+
+/* Footer Styles */
 footer {
+
     background-color: #fbf4d9;
-    color: #613d1d;
-    text-align: center;
-    padding: 15px;
-    font-size: 12px;
-    border-top: 1px solid #ddd;
+        color: #613d1d;
+        text-align: center;
+        padding: 15px;
+        font-size: 12px;
+        border-top: 1px solid #ddd;
+
+}
+
+footer p {
+    margin: 5px 0;
 }
